@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GASES | Chemistry ม.5</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CHEMISTRY.</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#models">The Laws</a></li>
+            <li><a href="#performance">Calculator</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>GASES.</h1>
+            <p>THE INVISIBLE DYNAMICS</p>
+            <a href="#models" class="btn-primary">Discover the Laws</a>
+        </div>
+    </header>
+
+    <section id="models" class="section-dark">
+        <h2 class="section-title">THE LAWS OF GASES</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>BOYLE</h3>
+                <div class="math">P₁V₁ = P₂V₂</div>
+                <p>ปริมาตรแปรผกผันกับความดัน (เมื่อ T, n คงที่)</p>
+            </div>
+            <div class="card">
+                <h3>CHARLES</h3>
+                <div class="math">V₁/T₁ = V₂/T₂</div>
+                <p>ปริมาตรแปรผันตรงกับอุณหภูมิ (เมื่อ P, n คงที่)</p>
+            </div>
+            <div class="card">
+                <h3>GAY-LUSSAC</h3>
+                <div class="math">P₁/T₁ = P₂/T₂</div>
+                <p>ความดันแปรผันตรงกับอุณหภูมิ (เมื่อ V, n คงที่)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="performance" class="section-light">
+        <h2 class="section-title text-black">PERFORMANCE CALCULATOR</h2>
+        <p class="subtitle">Ideal Gas Equation: <strong>PV = nRT</strong></p>
+        
+        <div class="calculator-box">
+            <div class="input-grid">
+                <div class="input-item">
+                    <label>Pressure (atm)</label>
+                    <input type="number" id="pInput" placeholder="e.g. 1.0">
+                </div>
+                <div class="input-item">
+                    <label>Volume (L)</label>
+                    <input type="number" id="vInput" placeholder="e.g. 22.4">
+                </div>
+                <div class="input-item">
+                    <label>Moles (mol)</label>
+                    <input type="number" id="nInput" placeholder="e.g. 1">
+                </div>
+                <div class="input-item">
+                    <label>Temperature (K)</label>
+                    <input type="number" id="tInput" placeholder="e.g. 298">
+                </div>
+            </div>
+            <button onclick="calculateGas()" class="btn-dark">ENGINE START (Calculate)</button>
+            <div id="result" class="result-display">รอรับค่า...</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
