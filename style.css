@@ -42,9 +42,8 @@ nav {
 
 /* --- Hero Section (ภาพเต็มจอ) --- */
 #hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('visible-gas-black-background-2yfh3exb56u2fg5s.jpg') center/cover;
     height: 100vh;
-    /* หาภาพควันสวยๆ มาใส่แทน URL นี้ได้ครับ */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2000&auto=format&fit=crop') center/cover;
     display: flex;
     justify-content: center;
     align-items: center;

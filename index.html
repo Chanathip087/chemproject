@@ -8,13 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Particles container -->
+    <div id="particles"></div>
+
+    <!-- Waves background -->
+    <div class="wave-container">
+        <svg class="wave-1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c149.92,22.43,259.41,30.34,370.22,27.2C754.89,67.22,852.15,26.35,945.18,11.15c76.64-10.92,151-15.78,225-15.78v-12H0z" fill="rgba(255,255,255,0.05)"></path>
+        </svg>
+        <svg class="wave-2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c149.92,22.43,259.41,30.34,370.22,27.2C754.89,67.22,852.15,26.35,945.18,11.15c76.64-10.92,151-15.78,225-15.78v-12H0z" fill="rgba(255,255,255,0.03)"></path>
+        </svg>
+    </div>
 
     <nav>
         <div class="logo">CHEMISTRY.</div>
         <ul class="nav-links">
             <li><a href="#hero">Overview</a></li>
-            <li><a href="#models">The Laws</a></li>
-            <li><a href="#performance">Calculator</a></li>
+            <li><a href="#models">Laws</a></li>
+            <li><a href="#units">Units</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#extra">Extra Topics</a></li>
         </ul>
     </nav>
 
@@ -26,55 +40,157 @@
         </div>
     </header>
 
-    <section id="models" class="section-dark">
-        <h2 class="section-title">THE LAWS OF GASES</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>BOYLE</h3>
-                <div class="math">P₁V₁ = P₂V₂</div>
-                <p>ปริมาตรแปรผกผันกับความดัน (เมื่อ T, n คงที่)</p>
+    <!-- Units Section -->
+    <section id="units" class="section-dark reveal">
+        <h2 class="section-title">Units of Measurement</h2>
+        <div class="units-grid">
+            <div class="unit-item reveal-delay-1">
+                <strong>Volume (V)</strong>
+                1 dm³ = 1 L = 1,000 cm³ = 1,000 mL
             </div>
-            <div class="card">
-                <h3>CHARLES</h3>
-                <div class="math">V₁/T₁ = V₂/T₂</div>
-                <p>ปริมาตรแปรผันตรงกับอุณหภูมิ (เมื่อ P, n คงที่)</p>
+            <div class="unit-item reveal-delay-2">
+                <strong>Pressure (P)</strong>
+                1 atm = 760 mmHg = 760 torr = 1.01325 × 10⁵ Pa = 101.325 kPa = 1.01325 bar = 14.7 psi
             </div>
-            <div class="card">
-                <h3>GAY-LUSSAC</h3>
-                <div class="math">P₁/T₁ = P₂/T₂</div>
-                <p>ความดันแปรผันตรงกับอุณหภูมิ (เมื่อ V, n คงที่)</p>
+            <div class="unit-item reveal-delay-3">
+                <strong>Temperature (T)</strong>
+                Kelvin: K = °C + 273.15
             </div>
         </div>
     </section>
 
-    <section id="performance" class="section-light">
-        <h2 class="section-title text-black">PERFORMANCE CALCULATOR</h2>
-        <p class="subtitle">Ideal Gas Equation: <strong>PV = nRT</strong></p>
-        
-        <div class="calculator-box">
-            <div class="input-grid">
-                <div class="input-item">
-                    <label>Pressure (atm)</label>
-                    <input type="number" id="pInput" placeholder="e.g. 1.0">
-                </div>
-                <div class="input-item">
-                    <label>Volume (L)</label>
-                    <input type="number" id="vInput" placeholder="e.g. 22.4">
-                </div>
-                <div class="input-item">
-                    <label>Moles (mol)</label>
-                    <input type="number" id="nInput" placeholder="e.g. 1">
-                </div>
-                <div class="input-item">
-                    <label>Temperature (K)</label>
-                    <input type="number" id="tInput" placeholder="e.g. 298">
-                </div>
+    <!-- Gas Laws Section -->
+    <section id="models" class="section-dark">
+        <h2 class="section-title">THE LAWS OF GASES</h2>
+        <div class="grid-container">
+            <div class="card reveal">
+                <h3>BOYLE'S LAW</h3>
+                <div class="math">P₁V₁ = P₂V₂</div>
+                <p>ปริมาตรแปรผกผันกับความดัน (เมื่อ T, n คงที่)</p>
             </div>
-            <button onclick="calculateGas()" class="btn-dark">ENGINE START (Calculate)</button>
-            <div id="result" class="result-display">รอรับค่า...</div>
+            <div class="card reveal reveal-delay-1">
+                <h3>CHARLES'S LAW</h3>
+                <div class="math">V₁/T₁ = V₂/T₂</div>
+                <p>ปริมาตรแปรผันตรงกับอุณหภูมิ (เมื่อ P, n คงที่)</p>
+            </div>
+            <div class="card reveal reveal-delay-2">
+                <h3>GAY‑LUSSAC'S LAW</h3>
+                <div class="math">P₁/T₁ = P₂/T₂</div>
+                <p>ความดันแปรผันตรงกับอุณหภูมิ (เมื่อ V, n คงที่)</p>
+            </div>
+            <div class="card reveal reveal-delay-3">
+                <h3>AVOGADRO'S LAW</h3>
+                <div class="math">V₁/n₁ = V₂/n₂</div>
+                <p>ปริมาตรแปรผันตรงกับจำนวนโมล (เมื่อ P, T คงที่)</p>
+            </div>
+            <div class="card reveal reveal-delay-4">
+                <h3>COMBINED GAS LAW</h3>
+                <div class="math">(P₁V₁)/T₁ = (P₂V₂)/T₂</div>
+                <p>รวมสูตรของกฎสี่ข้อแรก</p>
+            </div>
+            <div class="card reveal reveal-delay-5">
+                <h3>IDEAL GAS LAW</h3>
+                <div class="math">PV = nRT</div>
+                <p>สูตรหลักโดยใช้ R = 0.0821 L·atm·mol⁻¹·K⁻¹ (หรือ 8.314 J·mol⁻¹·K⁻¹)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    
+    <!-- Extra Topics Section -->
+    <section id="extra" class="section-dark additional-laws">
+        <h2 class="section-title">ADDITIONAL TOPICS</h2>
+        <div class="law-item reveal">
+            <h4>DALTON'S LAW (กฎดัลตัน)</h4>
+            <div class="math">P_{total} = \sum_i P_i</div>
+            <p>ความดันรวมของก๊าซผสมคือผลรวมของความดันส่วนประกอบ</p>
+        </div>
+        <div class="law-item reveal reveal-delay-1">
+            <h4>GRAHAM'S LAW (กฎแกรห์ม)</h4>
+            <div class="math">\frac{r_1}{r_2} = \sqrt{\frac{M_2}{M_1}}</div>
+            <p>อัตราการเบ่งของก๊าซสัดส่วนผกผันกับรากที่สองของมวลโมล (Molar Mass)</p>
+        </div>
+        <div class="law-item reveal reveal-delay-2">
+            <h4>DENSITY OF GASES</h4>
+            <div class="math">PM = dRT</div>
+            <p>โดย d = มวลต่อปริมาตร (g L⁻¹) หรือ d = \frac{PM}{RT}</p>
+        </div>
+        <div class="law-item reveal reveal-delay-3">
+            <h4>KINETIC MOLECULAR THEORY</h4>
+            <ul style="color:#ddd;">
+                <li>1. โมเลกุลเคลื่อนที่เป็นเส้นตรงโดยไม่มีแรงภายใน</li>
+                <li>2. การชนกันเป็นการชนแบบยืดหยุ่นเต็มที่</li>
+                <li>3. พลังงานจลน์เฉลี่ย \(E_k = \frac{3}{2}RT\)</li>
+                <li>4. ความสัมพันธ์ระหว่างอุณหภูมิและพลังงานจลน์</li>
+            </ul>
+        </div>
+        <div class="real-gases-note reveal reveal-delay-4">
+            <h4>Real Gases vs Ideal Gases</h4>
+            <p><strong>Ideal behavior:</strong> High temperature, low pressure.</p>
+            <p>เมื่ออุณหภูมิสูงหรือความดันต่ำ ก๊าซจะใกล้เคียงกับสมบัติของ Ideal Gas</p>
         </div>
     </section>
 
     <script src="script.js"></script>
+    <script>
+        // Particles.js – simple floating circles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const count = 60;
+            for (let i = 0; i < count; i++) {
+                const div = document.createElement('div');
+                const size = Math.random() * 4 + 2;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 10;
+                const duration = Math.random() * 15 + 10;
+                div.style.cssText = `
+                    position:absolute;
+                    width:${size}px;height:${size}px;
+                    background:rgba(255,255,255,${Math.random()*0.5+0.1});
+                    border-radius:50%;
+                    left:${left}vw;top:${Math.random()*100}vh;
+                    animation:float ${duration}s linear infinite;
+                    animation-delay:${delay}s;`;
+                container.appendChild(div);
+            }
+        }
+
+        // Wave animation speed randomizer
+        function animateWaves(){
+            document.querySelectorAll('.wave-1,.wave-2').forEach(w=>{
+                w.style.animationDuration = (Math.random()*5+10)+'s';
+            });
+        }
+
+        // Scroll reveal using IntersectionObserver
+        function revealOnScroll(){
+            const observer = new IntersectionObserver((entries)=>{
+                entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },{threshold:0.1});
+            document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+        }
+
+        // Nav shrink on scroll
+        function handleNavScroll(){
+            const nav=document.querySelector('nav');
+            window.addEventListener('scroll',()=>{
+                if(window.scrollY>80) nav.classList.add('scrolled');
+                else nav.classList.remove('scrolled');
+            });
+        }
+
+        // Keep existing calculateGas function (from script.js)
+        window.addEventListener('load',()=>{
+            createParticles();
+            animateWaves();
+            revealOnScroll();
+            handleNavScroll();
+        });
+    </script>
 </body>
 </html>
