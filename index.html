@@ -23,7 +23,6 @@
 
     <header id="hero">
         <div class="hero-shell">
-            <div class="hero-gas-orbit" aria-hidden="true"></div>
             <p class="eyebrow">Chemistry M.5 Term 1</p>
             <h1>GAS</h1>
             <p class="hero-copy">แก๊สและสมบัติของแก๊ส</p>
@@ -249,132 +248,10 @@
             });
         }
 
-        function handleHeroOrbit() {
-            const hero = document.querySelector('.hero-shell');
-            const title = hero?.querySelector('h1');
-            const orbit = document.querySelector('.hero-gas-orbit');
-
-            if (!hero || !title || !orbit) {
-                return;
-            }
-
-            const dotCount = 18;
-            const dots = [];
-            const orbitRadius = 248;
-            const ringSpread = 24;
-
-            for (let index = 0; index < dotCount; index += 1) {
-                const dot = document.createElement('span');
-                dot.className = 'orbit-dot';
-                dot.style.setProperty('--dot-index', `${index}`);
-                orbit.appendChild(dot);
-                dots.push(dot);
-            }
-
-            let frameId = 0;
-            let pointerX = 0;
-            let pointerY = 0;
-            let visible = false;
-            let rotation = 0;
-            let currentX = 0;
-            let currentY = 0;
-            let targetX = 0;
-            let targetY = 0;
-
-            const updateOrbit = () => {
-                frameId = 0;
-
-                if (!visible) {
-                    orbit.classList.remove('is-active');
-                    return;
-                }
-
-                const heroRect = hero.getBoundingClientRect();
-                const titleRect = title.getBoundingClientRect();
-                const minX = titleRect.left - heroRect.left - 240;
-                const maxX = titleRect.right - heroRect.left + 240;
-                const minY = titleRect.top - heroRect.top - 170;
-                const maxY = titleRect.bottom - heroRect.top + 140;
-
-                targetX = Math.max(minX, Math.min(maxX, pointerX - heroRect.left));
-                targetY = Math.max(minY, Math.min(maxY, pointerY - heroRect.top));
-
-                currentX += (targetX - currentX) * 0.12;
-                currentY += (targetY - currentY) * 0.12;
-
-                const centerX = currentX;
-                const centerY = currentY;
-                const pointerOffsetX = targetX - (heroRect.width / 2);
-                const pointerOffsetY = targetY - (heroRect.height / 2);
-                const pointerStrength = Math.min(1, Math.hypot(pointerOffsetX, pointerOffsetY) / 260);
-                rotation += 0.006 + pointerStrength * 0.005;
-
-                orbit.classList.add('is-active');
-                orbit.style.setProperty('--orbit-x', `${centerX}px`);
-                orbit.style.setProperty('--orbit-y', `${centerY}px`);
-                orbit.style.setProperty('--orbit-tilt-x', `${Math.max(-18, Math.min(18, pointerOffsetX * 0.03)).toFixed(2)}px`);
-                orbit.style.setProperty('--orbit-tilt-y', `${Math.max(-14, Math.min(14, pointerOffsetY * 0.03)).toFixed(2)}px`);
-
-                const pulse = 1 + Math.sin(performance.now() * 0.0015) * 0.03;
-
-                dots.forEach((dot, index) => {
-                    const angle = rotation + (index / dotCount) * Math.PI * 2;
-                    const ring = orbitRadius + Math.sin(performance.now() * 0.0012 + index) * ringSpread;
-                    const x = centerX + Math.cos(angle) * ring * pulse;
-                    const y = centerY + Math.sin(angle) * (ring * 0.72) * pulse;
-                    const scale = 0.68 + ((index % 5) * 0.06) + Math.max(0, 1 - pointerStrength) * 0.05;
-                    const alpha = 0.36 + (Math.sin(angle * 3) * 0.05) + pointerStrength * 0.18;
-
-                    dot.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%) scale(${scale.toFixed(2)})`;
-                    dot.style.opacity = Math.max(0.16, alpha).toFixed(3);
-                });
-
-                frameId = window.requestAnimationFrame(updateOrbit);
-            };
-
-            hero.addEventListener('pointerenter', () => {
-                visible = true;
-            });
-
-            hero.addEventListener('pointerleave', () => {
-                visible = false;
-                orbit.classList.remove('is-active');
-            });
-
-            window.addEventListener('pointermove', event => {
-                const rect = hero.getBoundingClientRect();
-
-                if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) {
-                    return;
-                }
-
-                pointerX = event.clientX;
-                pointerY = event.clientY;
-                visible = true;
-
-                if (!currentX && !currentY) {
-                    currentX = pointerX - rect.left;
-                    currentY = pointerY - rect.top;
-                    targetX = currentX;
-                    targetY = currentY;
-                }
-
-                if (!frameId) {
-                    frameId = window.requestAnimationFrame(updateOrbit);
-                }
-            });
-
-            window.addEventListener('pointerleave', () => {
-                visible = false;
-                orbit.classList.remove('is-active');
-            });
-        }
-
         window.addEventListener('load', () => {
             revealOnScroll();
             handleNavScroll();
             handleCursorSpotlight();
-            handleHeroOrbit();
         });
     </script>
 </body>
