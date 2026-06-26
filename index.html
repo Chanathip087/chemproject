@@ -28,20 +28,6 @@
     </nav>
 
     <header id="hero">
-        <!-- Orbit system lives OUTSIDE hero-shell so it won't get blurred -->
-        <div class="orbit-system">
-            <div class="orbit-ring orbit-ring-1">
-                <div class="orbit-dot"></div>
-            </div>
-            <div class="orbit-ring orbit-ring-2">
-                <div class="orbit-dot"></div>
-            </div>
-            <div class="orbit-ring orbit-ring-3">
-                <div class="orbit-dot"></div>
-                <div class="orbit-dot" style="top: 50%; left: 0;"></div>
-            </div>
-        </div>
-
         <div class="hero-shell">
             <div class="wave-divider"></div>
             <p class="eyebrow">Chemistry M.5 Term 1</p>
@@ -67,13 +53,13 @@
                         <p>แก๊สไม่มีรูปร่างและปริมาตรคงที่ โดยจะเปลี่ยนไปตามภาชนะที่บรรจุ มีความหนาแน่นต่ำ และบีบอัดให้มีปริมาตรเล็กลงได้ง่ายมาก</p>
                         <div class="feature-bullets">
                             <div class="bullet-item">
-                                <span class="bullet-icon">💨</span>
+                                
                                 <div>
                                     <strong>ฟุ้งกระจายเต็มภาชนะ:</strong> ปริมาตรและรูปร่างเปลี่ยนตามภาชนะที่บรรจุ
                                 </div>
                             </div>
                             <div class="bullet-item">
-                                <span class="bullet-icon">⚡</span>
+                                
                                 <div>
                                     <strong>เคลื่อนที่ไร้ระเบียบ:</strong> เคลื่อนที่เป็นเส้นตรงด้วยความเร็วคงที่จนกว่าจะชนกันเองหรือชนผนัง
                                 </div>
@@ -120,12 +106,10 @@
             </div>
         </section>
 
-        <div class="section-divider"></div>
-
         <section id="variables" class="section-dark reveal slide">
             <div class="section-heading">
-                <p class="section-kicker">2. ตัวแปรและหน่วยวัด</p>
-                <h2 class="section-title">ตัวแปรสำคัญในสมบัติของแก๊ส</h2>
+                <p class="section-kicker">1.1 - 1.3</p>
+                <h2 class="section-title">ตัวแปรหลักและหน่วยที่ต้องจำ</h2>
             </div>
             <div class="grid-container three-up">
                 <article class="card">
@@ -157,124 +141,109 @@
 
         <section id="laws" class="section-dark reveal slide">
             <div class="section-heading">
-                <p class="section-kicker">3. กฎของแก๊ส</p>
-                <h2 class="section-title">ความสัมพันธ์ที่ต้องจำ</h2>
+                <p class="section-kicker">2. กฎของแก๊ส</p>
+                <h2 class="section-title">ความสัมพันธ์สำคัญที่ต้องจำ</h2>
             </div>
             <div class="grid-container">
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #7ec8ef; vertical-align: middle; margin-right: 6px;"><path d="M4 14h16M4 2v20M20 2v20M8 6h8M12 2v4"/></svg>
-                        กฎของบอยล์ (Boyle's Law)
-                    </h3>
+                    <h3>กฎของบอยล์</h3>
                     <div class="math">P₁V₁ = P₂V₂</div>
-                    <p>ปริมาตรของแก๊สจะแปรผกผันกับความดัน เมื่ออุณหภูมิ (T) และจำนวนโมล (n) คงที่</p>
+                    <p>เมื่อ T และ n คงที่ ปริมาตรจะแปรผกผันกับความดัน</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #4fd6a6; vertical-align: middle; margin-right: 6px;"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M12 12v9M9 15h6"/></svg>
-                        กฎของชาร์ล (Charles's Law)
-                    </h3>
+                    <h3>กฎของชาร์ล</h3>
                     <div class="math">V₁/T₁ = V₂/T₂</div>
-                    <p>ปริมาตรของแก๊สจะแปรผันตรงกับอุณหภูมิสัมบูรณ์ เมื่อความดัน (P) และจำนวนโมล (n) คงที่</p>
+                    <p>เมื่อ P และ n คงที่ ปริมาตรจะแปรผันตรงกับอุณหภูมิสัมบูรณ์</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #f7a072; vertical-align: middle; margin-right: 6px;"><path d="M12 22V12M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M12 2v2"/></svg>
-                        กฎของเกย์-ลูสแซก
-                    </h3>
+                    <h3>กฎของเกย์-ลูสแซก</h3>
                     <div class="math">P₁/T₁ = P₂/T₂</div>
-                    <p>ความดันของแก๊สจะแปรผันตรงกับอุณหภูมิสัมบูรณ์ เมื่อปริมาตร (V) และจำนวนโมล (n) คงที่</p>
+                    <p>เมื่อ V และ n คงที่ ความดันจะแปรผันตรงกับอุณหภูมิ</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #a8e6cf; vertical-align: middle; margin-right: 6px;"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg>
-                        กฎของอาโวกาโดร
-                    </h3>
+                    <h3>กฎของอาโวกาโดร</h3>
                     <div class="math">V₁/n₁ = V₂/n₂</div>
-                    <p>ปริมาตรของแก๊สจะแปรผันตรงกับจำนวนโมล (n) เมื่ออุณหภูมิ (T) และความดัน (P) คงที่</p>
-                    <p class="small-note">ที่ STP แก๊สใดๆ 1 โมล จะมีปริมาตร 22.4 ลิตร</p>
+                    <p>เมื่อ P และ T คงที่ ปริมาตรจะแปรผันตรงกับจำนวนโมล</p>
+                    <p class="small-note">ที่ STP แก๊ส 1 mol มีปริมาตร 22.4 L</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #c7d7f0; vertical-align: middle; margin-right: 6px;"><path d="M16.5 9.4 7.55 4.24a1.79 1.79 0 0 0-2.5 1.55v12.42a1.79 1.79 0 0 0 2.5 1.55l8.95-5.16a1.79 1.79 0 0 0 0-3.1Z"/></svg>
-                        กฎรวมแก๊ส (Combined Law)
-                    </h3>
+                    <h3>กฎรวมแก๊ส</h3>
                     <div class="math">(P₁V₁)/T₁ = (P₂V₂)/T₂</div>
-                    <p>เป็นการรวมกฎของบอยล์และกฎของชาร์ลเข้าด้วยกัน ใช้เมื่อสภาวะเปลี่ยนแปลงไปพร้อมๆ กัน</p>
+                    <p>ใช้เมื่อ P, V และ T เปลี่ยนพร้อมกัน แต่ n คงที่</p>
                 </article>
             </div>
         </section>
 
-        <div class="section-divider"></div>
-
         <section id="ideal-gas" class="section-dark reveal slide">
             <div class="section-heading">
-                <p class="section-kicker">4. สมการแก๊สอุดมคติ</p>
+                <p class="section-kicker">3. สมการแก๊สอุดมคติ</p>
                 <h2 class="section-title">PV = nRT และการแตกสูตร</h2>
             </div>
             <div class="grid-container two-up">
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #7ec8ef; vertical-align: middle; margin-right: 6px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3a2.5 2.5 0 0 1 2.5-2.5H20v14H6.5a2.5 2.5 0 0 0-2.5 2.5z"/></svg>
-                        สมการหลัก
-                    </h3>
+                    <h3>สมการหลัก</h3>
                     <div class="math">PV = nRT</div>
                     <p>ค่า R ที่ใช้บ่อยคือ 0.0821 L·atm/(mol·K) หรือ 8.314 J/(mol·K)</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #4fd6a6; vertical-align: middle; margin-right: 6px;"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1m5-2.5L23 7l-2 1.5M21 6v14m0 0a2 2 0 0 0 2 2h-4a2 2 0 0 0 2-2z"/></svg>
-                        มวลและความหนาแน่น
-                    </h3>
+                    <h3>มวลและความหนาแน่น</h3>
                     <p>n = g / M</p>
                     <div class="math">M = (gRT)/(PV)</div>
                     <div class="math">D = (PM)/(RT)</div>
                     <p>ความหนาแน่นของแก๊สแปรผันตรงกับความดัน และแปรผกผันกับอุณหภูมิ</p>
                 </article>
             </div>
+            <div class="example-panel">
+                <h3>ตัวอย่างโจทย์</h3>
+                <p>แก๊สมีมวล 4.40 g อยู่ในภาชนะ 2.00 L ที่ 1.50 atm และ 27 °C</p>
+                <p>แปลง T = 300 K แล้วใช้ M = (gRT)/(PV) จะได้มวลโมเลกุลประมาณ 36.12 g/mol</p>
+            </div>
+            
 
         </section>
-
-        <div class="section-divider"></div>
 
         <section id="other-topics" class="section-dark reveal slide">
             <div class="section-heading">
-                <p class="section-kicker">5. หัวข้อเสริม</p>
-                <h2 class="section-title">ความดันย่อยและการแพร่ของแก๊ส</h2>
+                <p class="section-kicker">4 - 5</p>
+                <h2 class="section-title">ความดันย่อย การแพร่ และทฤษฎีจลน์</h2>
             </div>
-            <div class="grid-container three-up">
+            <div class="grid-container">
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #7ec8ef; vertical-align: middle; margin-right: 6px;"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
-                        กฎความดันย่อยของดอลตัน
-                    </h3>
-                    <div class="math">P<sub>total</sub> = P₁ + P₂ + P₃ + ...</div>
-                    <p>ความดันรวมของแก๊สผสมที่ไม่มีปฏิกิริยาเคมีต่อกัน จะเท่ากับผลรวมของความดันย่อยของแก๊สแต่ละชนิดในส่วนผสมนั้น</p>
+                    <h3>กฎของดอลตัน</h3>
+                    <div class="math">Ptotal = P₁ + P₂ + P₃ + ...</div>
+                    <p>ความดันรวมเท่ากับผลรวมของความดันย่อยของแก๊สทุกชนิด</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #4fd6a6; vertical-align: middle; margin-right: 6px;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                        เศษส่วนโมล (Mole Fraction)
-                    </h3>
-                    <div class="math">X₁ = n₁ / n<sub>total</sub></div>
-                    <p>อัตราส่วนจำนวนโมลของสารองค์ประกอบหนึ่งต่อจำนวนโมลทั้งหมด โดยความดันย่อยสัมพันธ์ตามสมการ: P₁ = X₁ · P<sub>total</sub></p>
+                    <h3>เศษส่วนโมล</h3>
+                    <div class="math">X₁ = n₁/ntotal</div>
+                    <p>ความดันย่อยสัมพันธ์กับเศษส่วนโมล: P₁ = X₁ · Ptotal</p>
                 </article>
                 <article class="card">
-                    <h3>
-                        <svg class="card-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: #f7a072; vertical-align: middle; margin-right: 6px;"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-                        กฎการแพร่ผ่านของเกรแฮม
-                    </h3>
-                    <div class="math">r₁ / r₂ = √(M₂ / M₁)</div>
-                    <p>อัตราการแพร่ผ่านของแก๊สจะเป็นสัดส่วนแปรผกผันกับรากที่สองของมวลโมเลกุลหรือความหนาแน่นของแก๊ส (แก๊สเบาแพร่เร็วกว่าแก๊สหนัก)</p>
+                    <h3>กฎของเกรแฮม</h3>
+                    <div class="math">r₁/r₂ = √(M₂/M₁)</div>
+                    <p>แก๊สที่มีมวลโมเลกุลต่ำจะแพร่และแพร่ผ่านได้เร็วกว่า</p>
+                </article>
+                <article class="card">
+                    <h3>ทฤษฎีจลน์ของแก๊ส</h3>
+                    <ul class="clean-list">
+                        <li>อนุภาคมีขนาดเล็กมากเมื่อเทียบกับภาชนะ</li>
+                        <li>ไม่มีแรงยึดเหนี่ยวระหว่างโมเลกุลในอุดมคติ</li>
+                        <li>เคลื่อนที่เป็นเส้นตรงแบบสุ่ม</li>
+                        <li>ชนแบบยืดหยุ่นสมบูรณ์</li>
+                        <li>E<sub>k</sub> = 3/2 RT ที่อุณหภูมิเดียวกัน</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>แก๊สจริง</h3>
+                    <p>แก๊สจริงเบี่ยงเบนจากอุดมคติ เพราะมีปริมาตรของอนุภาคและมีแรงยึดเหนี่ยวจริง</p>
+                    <p><strong>ใกล้อุดมคติที่สุด:</strong> อุณหภูมิสูง และความดันต่ำ</p>
                 </article>
             </div>
         </section>
 
-        <div class="section-divider"></div>
-
         <section id="quiz" class="section-dark reveal slide">
             <div class="section-heading">
-                <p class="section-kicker">6. แบบทดสอบความรู้</p>
+                <p class="section-kicker">5. แบบทดสอบความรู้</p>
                 <h2 class="section-title">💡 แบบทดสอบวัดความรู้เรื่องแก๊ส</h2>
             </div>
             
@@ -317,12 +286,10 @@
             </div>
         </section>
 
-        <div class="section-divider"></div>
-
         <section id="summary" class="section-dark reveal slide">
             <div class="section-heading">
-                <p class="section-kicker">7. สรุปภาพรวม</p>
-                <h2 class="section-title">ตารางสรุปข้อมูลของแก๊ส</h2>
+                <p class="section-kicker">6. สรุป</p>
+                <h2 class="section-title">ตารางภาพรวมกฎแก๊ส</h2>
             </div>
             <div class="summary-table">
                 <div class="summary-row summary-head">
@@ -371,17 +338,5 @@
         </section>
         </div></div>
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-brand">CHEM.</div>
-        <p>สื่อการเรียนรู้วิชาเคมี ม.5 เทอม 1 — แก๊สและสมบัติของแก๊ส</p>
-        <div class="footer-links">
-            <a href="#hero">กลับด้านบน ↑</a>
-            <a href="#intro">บทนำ</a>
-            <a href="#laws">กฎแก๊ส</a>
-            <a href="#quiz">แบบทดสอบ</a>
-        </div>
-    </footer>
-
 </body>
 </html>
