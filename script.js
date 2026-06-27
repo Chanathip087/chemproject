@@ -98,6 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-20% 0px -60% 0px' });
 
     sections.forEach(section => navObserver.observe(section));
+
+    // Card spotlight tracking effect
+    document.querySelectorAll('.card, .section-heading').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--glow-x', `${x}px`);
+            card.style.setProperty('--glow-y', `${y}px`);
+            card.style.setProperty('--glow-opacity', '1');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--glow-opacity', '0');
+        });
+    });
 });
 
 // ==========================================
@@ -472,6 +487,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ctx.fillStyle = grad;
         ctx.fillRect(pistonX - 4, 0, 18, height);
+
+        // Draw physical connecting rod extending to the right
+        ctx.fillStyle = 'rgba(79, 214, 166, 0.2)';
+        ctx.fillRect(pistonX + 14, height / 2 - 8, width - pistonX, 16);
+
+        ctx.fillStyle = 'rgba(79, 214, 166, 0.4)';
+        ctx.fillRect(pistonX + 14, height / 2 - 2, width - pistonX, 4);
 
         // Draw physical Piston handle grip lines
         ctx.strokeStyle = 'rgba(79, 214, 166, 0.3)';
